@@ -1,6 +1,6 @@
 // this code is not my work
 var url = GetUrl();
-url = "https://twitter.com/"+url;
+url = "https://"+url;
 window.location = url;
 window.location.href = url;
 window.location.assign = url;
