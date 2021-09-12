@@ -10,6 +10,7 @@ for (let i=0; i<websitelabel.length; i++){
         url = "https://" + websitelink[i] + url.slice(2);
     }
 }
+if (url == "")url = "https://github.com/"
 
 //url = "https://" + websitelink[1] + url.slice(2);
 window.location = url;
