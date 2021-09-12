@@ -4,18 +4,20 @@ var websitelink = ["","twitter.com/","open.spotify.com/track/","soundcloud.app.g
 
 var url = GetUrl();
 
+if (url == "")url = "n-mitori.art";
 for (let i=0; i<websitelabel.length; i++){
-    if (url.slice(0,2) == websitelabel[i]){
+    if (url.slice(0,2) === websitelabel[i]){
         url = "https://" + websitelink[i] + url.slice(2);
-        break;
     }
 }
 
-//url = "https://" + url;
+//url = "https://" + websitelink[1] + url.slice(2);
 window.location = url;
 window.location.href = url;
 window.location.assign = url;
 window.location.replace = url;
+
+document.write(url);
 
 // this code is not my work
 function GetUrl(){
