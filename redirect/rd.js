@@ -1,11 +1,23 @@
-// this code is not my work
+
+var websitelabel = ["n-","t-","s-","c-","a-","y-","w-","p-"];
+var websitelink = ["","twitter.com/","open.spotify.com/track/","soundcloud.app.goo.gl/","music.apple.com/","youtube.com/watch/?v=","ja.wikipedia.org/wiki/","pixiv.net/artworks/"];
+
 var url = GetUrl();
-url = "https://"+url;
+
+for (let i=0; i<websitelabel.length; i++){
+    if (url.slice(0,2) == websitelabel[i]){
+        url = "https://" + websitelink[i] + url;
+        break;
+    }
+}
+
+//url = "https://" + url;
 window.location = url;
 window.location.href = url;
 window.location.assign = url;
 window.location.replace = url;
 
+// this code is not my work
 function GetUrl(){
     var que = [], m = 0, hash = "", ar = "";
     var u = window.location.search;
