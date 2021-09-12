@@ -6,7 +6,7 @@ var url = GetUrl();
 
 for (let i=0; i<websitelabel.length; i++){
     if (url.slice(0,2) == websitelabel[i]){
-        url = "https://" + websitelink[i] + url;
+        url = "https://" + websitelink[i] + url.slice(2);
         break;
     }
 }
