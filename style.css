@@ -1,7 +1,9 @@
 @charset "UTF-8";
 body {
     background-color: #ebfff7;
-    background-image: url(img/background.png);
+    background: linear-gradient(135deg,#00b4be, #248364);
+
+    background-size: cover;
     background-attachment: fixed;
 }
 
@@ -18,9 +20,30 @@ h4 {
     text-align: center;
 }
 
+header {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3em;
+    background: linear-gradient(to right, #ffffff33, #ffffffaa);
+}
+
+header a img {
+    display: inline-block;
+    position: fixed;
+    margin-top: 12px;
+    width: 18%;
+    height: auto;
+    mix-blend-mode: lighten;
+    vertical-align:baseline;
+}
+
+
 .icon img {
     display: block;
-    width: 30%;
+    width: 20%;
     height: auto;
     margin-top: 10%;
     margin-bottom: 10%;
