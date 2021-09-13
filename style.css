@@ -1,24 +1,37 @@
 @charset "UTF-8";
 body {
-    background-color: #ebfff7;
     background: linear-gradient(135deg,#00b4be, #248364);
-
-    background-size: cover;
+    background-size: contain;
     background-attachment: fixed;
+    top: 0;
+    left: 0;
+    padding-bottom: 60px; 
 }
 
 h1 {
-    font-family: "Arial Black";
+    font-family: "Montserrat";
     color: #ebfff7;
     text-align: center;
-    
+    mix-blend-mode: lighten;
 }
 
 h4 {
-    font-family: "Kaisei Tokumin";
-    color: #ebfff7;
+    font-family: "Reenie Beanie";
+    color: #ebfff7cc;
     text-align: center;
+    mix-blend-mode: lighten;
 }
+
+h4 a img{
+    margin-top: 25px;
+    margin-bottom: 0px;
+    width: 25px;
+    height: auto;
+    color: #ffffff;
+    text-decoration: none;
+    mix-blend-mode: lighten;
+}
+
 
 header {
     display: block;
@@ -26,18 +39,26 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 3em;
+    height: 40px;
     background: linear-gradient(to right, #ffffff33, #ffffffaa);
+    mix-blend-mode: lighten;
+}
+
+header p {
+    position: fixed;
+    margin-top: 22px;
+    margin-left: 160px;
+    font-family: "Montserrat";
+    color: #ffffff;
 }
 
 header a img {
     display: inline-block;
     position: fixed;
     margin-top: 12px;
-    width: 18%;
-    height: auto;
+    width: auto;
+    height: 25px;
     mix-blend-mode: lighten;
-    vertical-align:baseline;
 }
 
 
@@ -45,10 +66,29 @@ header a img {
     display: block;
     width: 20%;
     height: auto;
-    margin-top: 10%;
+    margin-top: 20%;
     margin-bottom: 10%;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
     border-radius: 100%;
+}
+
+footer {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(135deg, #248364, #236583);
+}
+
+footer p {
+    position: absolute;
+    bottom: 0;
+    margin-top: 22px;
+    margin-bottom: 0px;
+    font-family: "Montserrat";
+    color: #ebfff7;
 }
