@@ -1,11 +1,31 @@
 @charset "UTF-8";
-body {
+
+body{
+    background-color: #ebfff7;
     background: linear-gradient(135deg,#00b4be, #248364);
     background-size: contain;
     background-attachment: fixed;
     top: 0;
     left: 0;
     padding-bottom: 60px; 
+    animation-name: fadeinBG;
+    animation-fill-mode: backwards;
+    animation-duration: 0s;
+    animation-iteration-count: initial;
+    animation-timing-function: ease-out;
+    animation-delay: 0.5s;
+    animation-direction: normal;
+}
+
+
+@keyframes fadeinBG{
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 h1 {
@@ -17,6 +37,7 @@ h1 {
 
 h4 {
     font-family: "Reenie Beanie";
+    font-size: large;
     color: #ebfff7cc;
     text-align: center;
     mix-blend-mode: lighten;
@@ -24,7 +45,7 @@ h4 {
 
 h4 a img{
     margin-top: 25px;
-    margin-bottom: 0px;
+    margin-bottom: 15%;
     width: 25px;
     height: auto;
     color: #ffffff;
@@ -34,32 +55,65 @@ h4 a img{
 
 
 header {
-    display: block;
+    display: flex;
     position: fixed;
+    justify-content: left;
     top: 0;
     left: 0;
     width: 100%;
     height: 40px;
-    background: linear-gradient(to right, #ffffff33, #ffffffaa);
+    font-family: "Montserrat";
+    color: #ffffff ;
+    text-decoration: none;
+    background: linear-gradient(to right, #ffffff22, #ffffff99);
     mix-blend-mode: lighten;
+    animation-name: FillinHeader;
+    animation-fill-mode: backwards;
+    animation-duration: 0.5s;
+    animation-iteration-count: initial;
+    animation-timing-function: ease-out;
+    animation-delay: 0.5s;
+    animation-direction: normal;
 }
 
-header p {
-    position: fixed;
-    margin-top: 22px;
-    margin-left: 160px;
-    font-family: "Montserrat";
-    color: #ffffff;
+
+@keyframes FillinHeader{
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 1;
+  }
 }
 
 header a img {
-    display: inline-block;
     position: fixed;
     margin-top: 12px;
     width: auto;
     height: 25px;
     mix-blend-mode: lighten;
 }
+
+.pf {
+    position: fixed;
+    margin-top: 22px;
+    margin-left: 160px;
+}
+
+.links {
+    display: inline;
+    right: 0;
+    margin-left: auto;
+    margin-right: 0;
+    position: fixed;
+    color: #ffffff;
+    text-decoration: none;
+    margin-top: 22px;
+}
+
+
+
 
 
 .icon img {
@@ -71,7 +125,12 @@ header a img {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    border-radius: 100%;
+    border-radius: 50%;
+    transition: all 300ms 0s ease;
+}
+
+.icon img:hover{
+    background: #ffffff55;
 }
 
 footer {
