@@ -10,7 +10,7 @@ body{
     padding-bottom: 60px; 
     animation-name: fadeinBG;
     animation-fill-mode: backwards;
-    animation-duration: 0s;
+    animation-duration: 0.5s;
     animation-iteration-count: initial;
     animation-timing-function: ease-out;
     animation-delay: 0.5s;
