@@ -65,7 +65,7 @@ header {
     font-family: "Montserrat";
     color: #ffffff ;
     text-decoration: none;
-    background: linear-gradient(to right, #ffffff22, #ffffff99);
+    background: linear-gradient(to right, #ffffff44, #ffffff88);
     mix-blend-mode: lighten;
     animation-name: FillinHeader;
     animation-fill-mode: backwards;
@@ -101,17 +101,20 @@ header a img {
     margin-left: 160px;
 }
 
-.links {
-    display: inline;
-    right: 0;
-    margin-left: auto;
-    margin-right: 0;
+nav {
+    display: inline-block;
+    right: 20px;
     position: fixed;
     color: #ffffff;
     text-decoration: none;
     margin-top: 22px;
 }
 
+nav span a {
+  color: #ffffff;
+    text-decoration: none;
+    margin-top: 22px;
+}
 
 
 
