@@ -4,7 +4,7 @@ var websitelink = ["","twitter.com/","open.spotify.com/track/","soundcloud.app.g
 
 var url = GetUrl();
 
-if (url == "")url = "n-mitori.art";
+if (url == "")url = "n-github.com";
 for (let i=0; i<websitelabel.length; i++){
     if (url.slice(0,2) === websitelabel[i]){
         url = "https://" + websitelink[i] + url.slice(2);
