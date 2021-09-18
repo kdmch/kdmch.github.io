@@ -2,7 +2,7 @@
 var websitelabel = ["n-","t-","s-","c-","a-","y-","w-","p-"];
 var websitelink = ["","twitter.com/","open.spotify.com/track/","soundcloud.app.goo.gl/","music.apple.com/","youtube.com/watch/?v=","ja.wikipedia.org/wiki/","pixiv.net/artworks/"];
 
-var url = GetUrl();
+var url = location.search.slice(1);
 
 if (url == "")url = "n-github.com";
 for (let i=0; i<websitelabel.length; i++){
@@ -10,7 +10,7 @@ for (let i=0; i<websitelabel.length; i++){
         url = "https://" + websitelink[i] + url.slice(2);
     }
 }
-if (url == "")url = "https://github.com/";
+if (url == "")url = "https://mitori.art/";
 
 //url = "https://" + websitelink[1] + url.slice(2);
 window.location = url;
