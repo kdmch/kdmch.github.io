@@ -1,9 +1,12 @@
 @charset "UTF-8";
 
 body{
+    margin: 0;
     background-color: #ebfff7;
-    background: linear-gradient(135deg,#00b4be, #248364);
-    background-size: contain;
+    /*background: linear-gradient(135deg,#00b4be, #248364);*/
+    background: linear-gradient(to right, #27455fdd, #27455fdd), url("./img/background.png");
+    background-position: center, center;
+    background-size: cover;
     background-attachment: fixed;
     top: 0;
     left: 0;
@@ -19,13 +22,13 @@ body{
 
 
 @keyframes fadeinBG{
-  0% {
-    opacity: 0;
-  }
+    0% {
+        opacity: 0;
+    }
 
-  100% {
-    opacity: 1;
-  }
+    100% {
+        opacity: 1;
+    }
 }
 
 h1 {
@@ -37,7 +40,7 @@ h1 {
 
 h4 {
     font-family: "Reenie Beanie";
-    font-size: large;
+    font-size: 150%;
     color: #ebfff7cc;
     text-align: center;
     mix-blend-mode: lighten;
@@ -65,7 +68,7 @@ header {
     font-family: "Montserrat";
     color: #ffffff ;
     text-decoration: none;
-    background: linear-gradient(to right, #ffffff44, #ffffff88);
+    background: linear-gradient(to right, #ffffff44, #ffffff66);
     mix-blend-mode: lighten;
     animation-name: FillinHeader;
     animation-fill-mode: backwards;
@@ -78,13 +81,13 @@ header {
 
 
 @keyframes FillinHeader{
-  0% {
-    width: 0;
-  }
+    0% {
+        width: 0;
+    }
 
-  100% {
-    width: 1;
-  }
+    100% {
+        width: 1;
+    }
 }
 
 header a img {
@@ -111,19 +114,80 @@ nav {
 }
 
 nav span a {
-  color: #ffffff;
+    color: #ffffff;
     text-decoration: none;
     margin-top: 22px;
 }
 
+.sample {
+    line-height: 20em;
+}
 
+.logo-maskl {
+    background-image: url("./img/background.png");
+    background-size: cover;
+    mask: logo-hexa;
+}
+
+.logo-hexa {
+    text-align: center;
+    position: absolute;
+    left: 2.5%;
+    top: 0%;
+}
+
+.logo-hexa img {
+    display: inline;
+    margin-top: 31.5%;
+    width: 10%;
+    height: auto;
+    
+
+    padding-inline: 30px;
+}
+
+
+.logo-outline {
+    text-align: center;
+    position: relative;
+
+}
+.logo-outline img {
+    display: inline;
+    margin-top: 30%;
+    width: 10%;
+    height: auto;
+    padding-inline: 30px;
+}
+
+.hexal {
+    /*-webkit-mask-image: url("./img/logo-outline.png");
+    mask-image: url("./img/logo-outline.png");
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    -webkit-mask-mode: luminance;
+    mask-mode: luminance;*/
+    rotate: -60deg;
+}
+.hexalo {
+    rotate: -60deg;
+}
+
+.hexan {
+    rotate: 60deg;
+}
+.hexano {
+    rotate: 60deg;
+}
 
 
 .icon img {
     display: block;
     width: 20%;
     height: auto;
-    margin-top: 20%;
+    margin-top: 30%;
     margin-bottom: 10%;
     margin-left: auto;
     margin-right: auto;
@@ -137,8 +201,8 @@ nav span a {
 }
 
 footer {
-    display: block;
-    position: absolute;
+    display: flex;
+    flex-direction: column;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -147,7 +211,7 @@ footer {
 }
 
 footer p {
-    position: absolute;
+    left: 0;
     bottom: 0;
     margin-top: 22px;
     margin-bottom: 0px;
