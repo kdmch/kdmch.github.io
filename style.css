@@ -61,16 +61,6 @@ h4 {
     mix-blend-mode: lighten;
 }
 
-h4 a img{
-    margin-top: 25px;
-    margin-bottom: 15%;
-    width: 25px;
-    height: auto;
-    color: #ffffff;
-    text-decoration: none;
-    mix-blend-mode: lighten;
-}
-
 
 header {
     display: flex;
@@ -138,10 +128,12 @@ nav span a {
     line-height: 20em;
 }
 
-.logo-maskl {
-    background-image: url("./img/background.png");
+.logo-mask {
+    /*background-image: url("./img/background.png");
     background-size: cover;
-    mask: logo-hexa;
+    mask: logo-hexa;*/
+    text-decoration: none;
+    mix-blend-mode: lighten;
 }
 
 .logo-hexa {
@@ -150,7 +142,6 @@ nav span a {
     left: 2.5%;
     top: 0%;
     text-decoration: none;
-    mix-blend-mode: lighten;
 }
 
 .logo-hexa img {
@@ -158,7 +149,7 @@ nav span a {
     margin-top: 31.5%;
     width: 10%;
     height: auto;
-    
+    text-decoration: none;
 
     padding-inline: 30px;
 }
@@ -187,20 +178,57 @@ nav span a {
     -webkit-mask-mode: luminance;
     mask-mode: luminance;*/
     rotate: -60deg;
+    transition-duration: 0.2s;
+}
+.hexal:hover {
+    transform: rotate(-60deg);
+    transition-duration: 0.2s;
+
 }
 .hexalo {
     rotate: -60deg;
 }
 
+.hexae {
+    transition-duration: 0.2s;
+}
+
+.hexae:hover {
+    transform: rotate(-60deg);
+    transition-duration: 0.2s;
+}
+
 .hexan {
     rotate: 60deg;
+    transition-duration: 0.2s;
+}
+.hexan:hover {
+    transform: rotate(-60deg);
+    transition-duration: 0.2s;
 }
 .hexano {
     rotate: 60deg;
 }
 
-about {
-    background: ;
+.about-section {
+    position: relative;
+    margin-top: 30%;
+    margin-bottom: 30%;
+    z-index: 0;
+}
+
+.about-section::after{
+
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ffffff22, #ffffff44);
+    transform: skewY(-15deg);
 }
 
 
@@ -209,15 +237,20 @@ about {
 
 
 
+.icon {
 
+    padding-top: 15px;
 
+}
 
 .icon img {
     display: block;
+
+
     width: 20%;
     height: auto;
     margin-top: 30%;
-    margin-bottom: 10%;
+    margin-bottom: 15%;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -226,24 +259,48 @@ about {
 }
 
 .icon img:hover{
-    background: #ffffff55;
+    opacity: 0.9;
+    transform: scale(1.1);
+    transition-duration: 0.2s;
 }
+
+.link-tw {
+    text-align: center;
+}
+
+.link-tw a img {
+    margin-top: 25px;
+    margin-bottom: 25%;
+    width: 25px;
+    height: auto;
+    color: #ffffff;
+    text-decoration: none;
+    mix-blend-mode: lighten;
+}
+
+.link-tw a img:hover {
+    transform: scale(1.2);
+    transition-duration: 0.2s;
+}
+
 
 footer {
     display: flex;
     flex-direction: column;
+    margin-bottom: -60px;
+    padding-bottom: 0px;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 40px;
-    background: linear-gradient(135deg, #248364, #236583);
+    background: linear-gradient(135deg, #ffffff22, #ffffff44);
 }
 
 footer p {
-    left: 0;
-    bottom: 0;
     margin-top: 22px;
+    margin-left: auto;
+    margin-right: 15px;
     margin-bottom: 0px;
-    font-family: "Montserrat";
+    font-family: "Reenie Beanie";
     color: #ebfff7;
 }
