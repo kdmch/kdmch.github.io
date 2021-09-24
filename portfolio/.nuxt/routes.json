@@ -1,0 +1,14 @@
+[
+  {
+    "name": "inspire",
+    "path": "/inspire",
+    "component": "/Users/mitori/kdmch.github.io/portfolio/pages/inspire.vue",
+    "chunkName": "pages/inspire"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/mitori/kdmch.github.io/portfolio/pages/index.vue",
+    "chunkName": "pages/index"
+  }
+]
