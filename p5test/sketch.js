@@ -1,19 +1,27 @@
 var pos = 0;
 var dy, sy, moveflag, touchflag = 0;
-var hlimit = -200;
+var hlimit = -400;
+var descr = [];
 
 function setup(){
+    descr[0] = ['mt portfolio',0.03];
     createCanvas(window.innerWidth,window.innerHeight);
     background(0);
+    font = loadFont('./img/Montserrat-ExtraBold.ttf');
+    textFont(font);
 }
 function draw(){
     width = window.innerWidth;
     height = window.innerHeight;
     fill(0,0,0);
     rect(0,0,width,height);
-    fill(0,128,0);
-    ellipse(width/2,height/2+pos,100);
+    fill(0,180,190);
+    //ellipse(width/2,height/2+pos,100);
+    text(descr[0][0],width/2-40,height/2+pos);
+
+
 }
+
 
 function windowResized() {
     resizeCanvas(window.innerWidth,window.innerHeight);
@@ -30,9 +38,11 @@ function mouseWheel(event) {
     if(pos <= 0 && pos >= hlimit){
         pos -= dy;
     }else if(pos > 0){
-        pos = 0;
+        dy = 0;
+        pos -= abs(pos)*1.5;
     }else if(pos < hlimit){
-        pos = hlimit;
+        dy = 0;
+        pos += abs(hlimit-pos)*1.5;
     }
     return false;
 }
