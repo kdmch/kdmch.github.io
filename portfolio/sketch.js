@@ -1,6 +1,10 @@
 let img = [];
 let imgdscr = [];
 imgdscr[0] = 'icon';
+imgdscr[1] = 'twitter';
+imgdscr[2] = 'debug';
+
+let debug
 
 function preload(){
     for(let i = 0; i<imgdscr.length; i++){
@@ -21,26 +25,46 @@ function draw(){
     noStroke();
     fill('#2e445b');
     rect(0,0,width,height);
-    drawwindow(20,20,200,2,0,'0xffffff');
-    if (mouseIsPressed == true){
-        drawwindow(20,20,200,2,0,'#aaaaaa');
-        fill('#cccccc');
-        rect(300,0,400,200);
+
+    drawwindow(0,0,4,0,'#ffffff',255);
+    drawwindow(4,2,1,1,'#ffffff',255);
+    drawwindow(4,0,2,2,'#ffffff',255);
+    drawwindow(4,3,1,1,'#ffffff',255);
+    drawwindow(5,2,1,2,'#ffffff',255);
+    drawwindow(6,0,2,1,'#ffffff',255);
+    
+    if(mouseIsPressed == true){
+        drawwindow(20,20,4,0,'#274054',196);
     }
 
     
 }
 
-function drawwindow(sx,sy,size,magni,imgnum,color){
-    //img = loadImage(imgurl);
-    fill(color);
-    rect(sx,sy,sx+size*magni,sy+size*magni);
-    imageMode(CORNERS)
-    img[imgnum].resize(size*magni*1.1,size*magni*1.1);
-    image(img[imgnum],sx,sy);
+function drawwindow(gridx,gridy,magni,imgnum,color,grey){
 
+    dynamix = 9.8;
+
+    size = window.innerWidth /dynamix;
+    padding = window.innerWidth / (dynamix*5);
+    margin = (magni-1) *padding;
+    frame = size /30;
+
+    sx = size*gridx + padding*(gridx+1);
+    sy = size*gridy + padding*(gridy+1);
+
+    fill(color);
+    rect(sx,sy, size*magni +margin, size*magni +margin);
+    tint(grey, 255);
+    img[imgnum].resize(size*magni +margin -frame*2, size*magni +margin -frame*2);
+    image(img[imgnum], sx+frame, sy+frame);
 }
 
 function windowResized() {
     resizeCanvas(window.innerWidth,window.innerHeight);
+}
+
+function randomint(min, max){ // --- original code from: mdn web docs
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min);
 }
