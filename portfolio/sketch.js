@@ -1,13 +1,15 @@
 let img = [];
-let imgdscr = [];
-imgdscr[0] = 'icon';
-imgdscr[1] = 'twitter';
-imgdscr[2] = 'debug';
+let descript = [];
+let grid = [];
 
-let debug
+descript[0] = ['icon','https://mitori.art/'];
+descript[1] = ['twitter','https://twitter.com/kadomache'];
+descript[2] = ['debug','https://mitori.art/diary'];
+
+let debug;
 
 function preload(){
-    for(let i = 0; i<imgdscr.length; i++){
+    for(let i = 0; i<descript.length; i++){
         img[i] = loadImage('img/tile'+i+'.jpg');
     }
 }
@@ -19,6 +21,15 @@ function setup(){
     textFont(font);
 }
 
+function redraw(){
+    drawwindow(0,0,4,0,'#ffffff',255);
+    drawwindow(4,2,1,1,'#ffffff',255);
+    drawwindow(4,0,2,2,'#ffffff',255);
+    drawwindow(4,3,1,1,'#ffffff',255);
+    drawwindow(5,2,1,2,'#ffffff',255);
+    drawwindow(6,0,2,1,'#ffffff',255);
+}
+
 function draw(){
     width = window.innerWidth;
     height = window.innerHeight;
@@ -26,14 +37,14 @@ function draw(){
     fill('#2e445b');
     rect(0,0,width,height);
 
-    drawwindow(0,0,4,0,'#ffffff',255);
-    drawwindow(4,2,1,1,'#ffffff',255);
-    drawwindow(4,0,2,2,'#ffffff',255);
-    drawwindow(4,3,1,1,'#ffffff',255);
-    drawwindow(5,2,1,2,'#ffffff',255);
-    drawwindow(6,0,2,1,'#ffffff',255);
-    
+    fill('#ffffff');
+    infox = Math.ceil((mouseX / window.innerWidth) /0.125) -1;
+    infoy = Math.ceil((mouseY / window.innerWidth) /0.125) -1;
+    text(infox,0,15);
+    text(infoy,0,30);
+
     if(mouseIsPressed == true){
+        url = gettile();
         drawwindow(20,20,4,0,'#274054',196);
     }
 
@@ -59,8 +70,16 @@ function drawwindow(gridx,gridy,magni,imgnum,color,grey){
     image(img[imgnum], sx+frame, sy+frame);
 }
 
+function gettile(){
+    mx = mouseX / window.innerWidth;
+    detected = 0;
+    return descript[detected];
+}
+
+
 function windowResized() {
     resizeCanvas(window.innerWidth,window.innerHeight);
+    redraw();
 }
 
 function randomint(min, max){ // --- original code from: mdn web docs

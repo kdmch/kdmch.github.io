@@ -1,0 +1,35 @@
+.sidebar{
+    /*position: sticky;*/
+    background-color :#ffffff66;
+    width: 150px;
+    height: auto;
+    text-align: center;
+} 
+
+.main{
+    background-color :#ffffffaa;
+    flex-grow: 2;
+    width: auto;
+    height: auto;
+    text-align: left;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.main p{
+    margin-left: 40px;
+}
+
+.heading{
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 30px;
+    font-size: 30px;
+}
+
+article {
+    display: flex;
+    color: #2e445b;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
