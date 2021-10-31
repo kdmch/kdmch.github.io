@@ -125,12 +125,18 @@ article {
         width: auto;
         height: auto;
     }
+    .sidebar a{
+        font-size: normal;
+    }
     .index{
         padding-top: 30px;
     }
     .main{
         margin-left: 20px;
         margin-top: 0px;
+    }
+    .heading p{
+        font-size: 25px;
     }
     .text{
         padding-bottom: 30px;
