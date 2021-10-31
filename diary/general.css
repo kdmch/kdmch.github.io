@@ -1,8 +1,34 @@
+
+root{ /* --- theme: bright --- */
+    --text: #2e445b;
+    --text-bright: #5f758e;
+    --text-pale: #8aa0bb;
+    --text-h: #fff;
+    --sidebar-bg: #ffffffbb;
+    --head-bg: #fff;
+    --main-bg: #ffffffdd;
+    --main-h: #5f758e;
+}
+
+@media (prefers-color-scheme: dark){
+    :root{ /* --- theme: dark --- */
+        --text: #fff;
+        --text-bright: #d6edff;
+        --text-pale: #abc2dd;
+        --text-h: #fff;
+        --sidebar-bg: #5f758e;
+        --head-bg: #5f758e;
+        --main-bg: #2e445b;
+        --main-h: #5f758e;
+    }
+}
+
 article {
     display: flex;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     gap: 20px;
-    color: #2e445b;
+    color: var(--text);
+    transition: .5s;
     margin-top: 20px;
     margin-left: 20px;
     margin-right: 20px;
@@ -12,7 +38,7 @@ article {
 .sidebar{
     /*position: sticky;*/
     position: fixed;
-    background-color :#ffffffbb;
+    background-color: var(--sidebar-bg);
     border-radius: 15px;
     padding-bottom: 30px;
     width: 150px;
@@ -24,7 +50,7 @@ article {
     margin-left: 10px;
     margin-right: 10px;
     font-size: small;
-    color: #5f758e;
+    color: var(--text-bright);
     text-decoration: none;
 }
 
@@ -36,7 +62,7 @@ article {
 
 .main{
     margin-left: 170px;
-    background: linear-gradient(to right, #ffffffcc, #ffffffdd);
+    background: var(--main-bg);/*linear-gradient(to right, #ffffffcc, #ffffffdd);*/
     border-radius: 15px;
     flex-grow: 2;
     width: auto;
@@ -45,7 +71,7 @@ article {
 }
 
 .heading{
-    background-color: #ffffff;
+    background-color: var(--head-bg);
     border-radius: 15px;
     padding-top: 5px;
 }
@@ -60,13 +86,13 @@ article {
 
 .headsub{
     font-family: "Montserrat";
-    color: #8aa0bb;
+    color: var(--text-pale);
     margin-left: 50px;
     margin-right: 50px;
 }
 
 .headsub a{
-    color: #5f758e;
+    color: var(--text-bright);
     text-decoration: none;
 }
 
@@ -85,32 +111,6 @@ article {
     margin-right: 50px;
     padding-bottom: 30px;
 }
-
-.text{
-    font-size: 16px;
-    margin-top: 50px;
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-bottom: 50px;
-    line-height: normal;
-}
-
-.text iframe{
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-h3{
-    margin-top: 30px;
-    margin-bottom: 30px;
-    padding: 1rem 2rem;
-    background-color: #5f758e;
-    border-radius: 10px;/*
-    border-top: 3px dashed #fff;
-    border-bottom: 3px dashed #fff;*/
-    color: #fff;
-}
-
 
 /* --- for smartphone --- */
 
