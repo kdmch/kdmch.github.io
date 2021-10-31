@@ -16,10 +16,10 @@ root{ /* --- theme: bright --- */
         --text-bright: #d6edff;
         --text-pale: #abc2dd;
         --text-h: #fff;
-        --sidebar-bg: #5f758e;
-        --head-bg: #5f758e;
-        --main-bg: #2e445b;
-        --main-h: #5f758e;
+        --sidebar-bg: #5f758ebb;
+        --head-bg: #5f758edd;
+        --main-bg: #2e445bcc;
+        --main-h: #5f758edd;
     }
 }
 
