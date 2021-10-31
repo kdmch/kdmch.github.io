@@ -48,7 +48,7 @@ body::before{
 
 header {
     display: flex;
-    position: fixed;
+    /*position: fixed;*/
     justify-content: left;
     top: 0;
     left: 0;
@@ -78,7 +78,7 @@ header {
     }
 }
 header a img {
-    position: fixed;
+    /*position: fixed;*/
     margin-top: 12px;
     width: auto;
     height: 25px;
@@ -87,7 +87,8 @@ header a img {
 nav {
     display: inline-block;
     right: 20px;
-    position: fixed;
+    /*position: fixed;*/
+    position: absolute;
     color: #ffffff;
     text-decoration: none;
     margin-top: 22px;
@@ -98,7 +99,7 @@ nav span a {
     margin-top: 22px;
 }
 .pf {
-    position: fixed;
+    position: absolute;
     margin-top: 22px;
     margin-left: 160px;
 }
