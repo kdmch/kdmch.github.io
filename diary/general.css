@@ -147,18 +147,21 @@ h3{
         margin-top: 0px;
     }
     .heading p{
-        font-size: 20px;
+        font-size: 30px;
     }
     .headsub{
         margin-left: 30px;
         font-size: 15px;
+    }
+    .share-buttons{
+        margin-left: 30px;
     }
     .text{
         padding-bottom: 30px;
         margin-bottom: 0px;
     }
     h3{
-        margin-left: 0px;
-        margin-right: 0px;
+        margin-left: -40px;
+        margin-right: -40px;
     }
 }

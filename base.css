@@ -30,7 +30,7 @@ body::before{
     z-index: -1;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(to right, #27455fdd, #27455fdd), url("https://mitori.art/img/background.png");
+    background: linear-gradient(to right, #27455fbb, #27455fbb), url("https://mitori.art/img/background.png");
     background-size: cover;
 
 }
