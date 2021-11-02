@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ja" prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="UTF-8">
+        <title>Unicode Widgets - mitorie</title>
+        <meta name="description" content="Decorate Your Text.">
+        <meta name="author" content="mitori">
+        <meta property="og:title" content="Unicode Widgets - mitorie">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="https://mitori.art/">
+        <meta property="og:site_name" content="Unicode Widgets - mitorie">
+        <meta property="og:description" content="Decorate Your Text.">
+        <meta property="og:image" content="https://mitori.art/img/cover.jpg">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@leffeine">
+        <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+        <link rel=”icon” href=“favicon.ico”>
+        <link rel="apple-touch-icon" href="https://mitori.art/img/cover.jpg">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="convert.js"></script>
+    </head>
+    <body>
+        <header id="header">
+            <a href="./"><img src="https://mitori.art/img/logo.png" alt="logo"></a>
+            <div class="pf">Unicode Widgets</div>
+            <!--
+            <nav>
+                <span><a href="https://mitori.art/"> top </a></span>.
+                <span><a href="https://mitori.art/portfolio"> portfolio </a></span>.
+                <span><a href="https://mitori.art/diary/"> diary </a></span>
+            </nav>
+            -->
+        </header>
+        
+        <div id="widgets">
+            <div id="enclosed">
+                <div class="tag">
+                    <p>Enclosed</p>
+                    <div class="likethis">
+                        🄰🅰Ⓐ🅐🄐🇦
+                    </div>
+                </div>
+                <div class="form">
+                    <form action="">
+                        <div class="field">
+                            <input id="enc_textbox" name="enc_textbox" type="text" placeholder="Input Here" onkeyup="encConvert()">
+                            <div id="enc_result">r
+                            </div>
+                        </div>
+                        
+                    </form>
+                    <fieldset>
+                        <div>
+                            <input class="radio-inline__input" type="radio" value="enc_psq" id="enc_psq" name="accessible-radio" checked>
+                            <label class="radio-inline__label" for="enc_psq">🄰 squared</label>
+                        </div>
+                        <div>
+                            <input class="radio-inline__input" type="radio" value="enc_nsq" id="enc_nsq" name="accessible-radio">
+                            <label class="radio-inline__label" for="enc_nsq">🅰 negative squared</label>
+                        </div>
+                        <div>
+                            <input class="radio-inline__input" type="radio" value="enc_cir" id="enc_cir" name="accessible-radio">
+                            <label class="radio-inline__label" for="enc_cir">Ⓐ circled</label>
+                        </div>
+                        <div>
+                            <input class="radio-inline__input" type="radio" value="enc_ncr" id="enc_ncr" name="accessible-radio">
+                            <label class="radio-inline__label" for="enc_ncr">🅐 negative circled</label>
+                        </div>
+                        <div>
+                            <input class="radio-inline__input" type="radio" value="enc_par" id="enc_par" name="accessible-radio">
+                            <label class="radio-inline__label" for="enc_par">🄐 parenthesized</label>
+                        </div>
+                        <div>
+                            <input class="radio-inline__input" type="radio" value="enc_ris" id="enc_ris" name="accessible-radio">
+                            <label class="radio-inline__label" for="enc_ris">🇦 regional indicator</label>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <footer>
+            <p>
+                © 2021 mitori kadomachi
+            </p>
+        </footer>
+    </body>
+</html>
