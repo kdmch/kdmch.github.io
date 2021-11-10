@@ -23,6 +23,13 @@
     }
 }
 
+header{
+    background: linear-gradient(to right, #ffffff44, #ffffff66);
+}
+footer{
+    background: linear-gradient(to right, #ffffff44, #ffffff66);
+}
+
 article {
     display: flex;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
