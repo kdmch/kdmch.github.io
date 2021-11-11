@@ -4,51 +4,8 @@
     --darken: #444444;
     --text: #446600;
     --hilight: #bbff44;
-
-
-}
-
-body{
-    display: block;
-    background-color: #111822;
-    background: linear-gradient(to right, #111122f9, #112222f9), url("https://mitori.art/img/background.png");
-    background-size: cover;
-    margin: 0;
-    top: 0;
-    left: 0;
-    padding-bottom: 60px;
-    width: 100%;
-    height: 100vh;
-
-}
-header {
-    display: flex;
-    z-index: 1;
-    /*position: fixed;*/
-    justify-content: left;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 40px;
-    font-family: "Montserrat";
-    color: #ffffff;
-    text-decoration: none;
-    background: #00000044;
-}
-
-.headerleft {
-    /*position: fixed;*/
-    display: inline-flex;
-    gap: 10px;
-    margin-top: 10px;
-    margin-left: 10px;
-}
-.logo a img{
-    width: 24px;
-    height: auto;
-}
-.pf{
-    margin-top: 3px;
+    --size: 48px;
+    --formsize: calc(var(--size)*6);
 }
 
 #main{
@@ -63,11 +20,11 @@ header {
     margin-top: 50%;
     text-align: center;
     font-family: "Montserrat";
-    font-size: 24px;
-    background-color: #00000011;
+    font-size: var(--size);
+    background-color: #00000000;
     border-radius: 10px;
     color: var(--hilight);
-    width: 150px;
+    width: var(--formsize);
     height: auto;
     outline: none;
     border: none;
@@ -75,30 +32,11 @@ header {
 ::placeholder{
     color: var(--text);
 }
-
-
-
-
-
-
-footer {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-    margin-bottom: -60px;
-    padding-top: auto;
-    padding-bottom: 0px;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 40px;
-    background: #00000044;
-}
-footer p {
-    margin-top: 16px;
-    margin-left: auto;
-    margin-right: 15px;
-    margin-bottom: 0px;
-    font-family: "Reenie Beanie";
-    color: #ffffff;
+#testfield{
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    font-family: "Montserrat";
+    font-size: var(--size);
+    color: var(--text);
 }
