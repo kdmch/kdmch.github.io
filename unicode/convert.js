@@ -14,7 +14,7 @@ function encTransform($this){
 			uc = squared + midcp;
 			result = result + String.fromCodePoint(uc);
 		}else{
-			result = result + string[i]
+			result = result + string[i];
 		}
 	}
     enc_result.innerHTML = result;

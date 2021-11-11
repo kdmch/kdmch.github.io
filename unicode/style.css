@@ -111,6 +111,7 @@ fieldset{
     padding-top: 20px;
     padding-left: 20px;
     color: #fff;
+    width: var(--size-field);
     height: 80px;
 }
 .radio-inline__input {
