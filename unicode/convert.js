@@ -1,17 +1,21 @@
-let text_form = document.getElementById('enc_textbox');
-let output = document.getElementById('emc_result');
+const squared = 0x1f130 - 0x41;
 
-timestamp = 0;
 
-function update(){
-	
-	timestamp++;
-	window.requestAnimationFrame(update);
-	
-	if (timestamp % 10 == 0 ){
-		output.innerHTML = {null : text_form.value};
+function encTransform($this){
+	let string = $this.value;
+	let result = "";
+	let uc, midcp;
+	for(let i=0; i<string.length; i++){
+		midcp = string[i].codePointAt(0);
+		if((midcp>0x60)&&(midcp<0x7b)){
+			midcp = midcp - 0x20;
+		}
+		if((midcp>0x40)&&(midcp<0x5b)){
+			uc = squared + midcp;
+			result = result + String.fromCodePoint(uc);
+		}else{
+			result = result + string[i]
+		}
 	}
-	
+    enc_result.innerHTML = result;
 }
-
-update();

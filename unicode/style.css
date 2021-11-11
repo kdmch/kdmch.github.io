@@ -1,81 +1,26 @@
 @charset "UTF-8";
 
-body{
-    margin: 0;
-    background-color: #2e445b;
-    top: 0;
-    left: 0;
-    padding-bottom: 60px; 
-    animation-name: fadeinBG;
-    animation-fill-mode: backwards;
-    animation-duration: 0.5s;
-    animation-iteration-count: initial;
-    animation-timing-function: ease-out;
-    animation-delay: 0.5s;
-    animation-direction: normal;
+:root{
+    --size-outer: 560px;
+    --size-tag: 40px;
+    --size-text: 24px;
+    --size-field: 300px;
+    --size-checkbox: 180px;
+    --size-like: 16px;
 }
-body::before{
-    content: "";
+
+body{
     display: block;
-    position: fixed;
+    background-color: #111822;
+    background: linear-gradient(to right, #222244e9, #224444e9), url("https://mitori.art/img/background.png");
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
     top: 0;
     left: 0;
-    z-index: -1;
+    padding-bottom: 60px;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(to right, #27455fbb, #27455fbb), url("https://mitori.art/img/background.png");
-    background-size: cover;
-}
-@keyframes fadeinBG{
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-header {
-    display: flex;
-    /*position: fixed;*/
-    justify-content: left;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 40px;
-    font-family: "Montserrat";
-    color: #ffffff ;
-    text-decoration: none;
-    background: linear-gradient(to right, #ffffff44, #ffffff66);
-    mix-blend-mode: lighten;
-    animation-name: FillinHeader;
-    animation-fill-mode: backwards;
-    animation-duration: 0.5s;
-    animation-iteration-count: initial;
-    animation-timing-function: ease-out;
-    animation-delay: 0.5s;
-    animation-direction: normal;
-}
-@keyframes FillinHeader{
-    0% {
-        width: 0;
-    }
-
-    100% {
-        width: 1;
-    }
-}
-header a img {
-    /*position: fixed;*/
-    margin-top: 12px;
-    width: auto;
-    height: 25px;
-    mix-blend-mode: lighten;
-}
-
-.pf {
-    position: absolute;
-    margin-top: 22px;
-    margin-left: 160px;
 }
 
 #widgets {
@@ -90,7 +35,7 @@ header a img {
 #enclosed{
     background-color: #a7d000;
     border-radius: 24px;
-    width: auto;
+    width: var(--size-outer);
     padding: 32px;
 }
 .tag{
@@ -100,10 +45,11 @@ header a img {
 .tag p{
     margin-top: -10px;
     margin-bottom: 20px;
-    font-size: 40px;
+    font-size: var(--size-tag);
 }
 .likethis{
     font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
     background-color: #9ac000;
     border-radius: 10px;
     margin-top: -10px;
@@ -112,7 +58,8 @@ header a img {
     padding-top: 10px;
     padding-left: 20px;
     padding-right: 10px;
-    font-size: 16px;
+    width: var(--size-checkbox);
+    font-size: var(--size-like);
     letter-spacing: 5px;
 }
 .form{
@@ -124,8 +71,10 @@ fieldset{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     background-color: #9ac000;
+    margin-left: auto;
+    margin-right: 2px;
     padding: 10px;
-    width: 180px;
+    width: var(--size-checkbox);
     border: none;
     border-radius: 12px;
     line-height: 32px;
@@ -133,17 +82,18 @@ fieldset{
 .field{
     display: block;
     margin-left: 10px;
-    width: auto;
+    width: calc(var(--size-field)+20px);
     text-align: start;
 }
 #enc_textbox{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    font-size: 24px;
+    font-size: var(--size-text);
     padding-left: 20px;
     background-color: #7d9c00;
     border-radius: 10px;
     color: #fff;
+    width: var(--size-field);
     height: 100px;
     outline: none;
     border: none;
@@ -154,7 +104,7 @@ fieldset{
 #enc_result{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    font-size: 24px;
+    font-size: var(--size-text);
     background-color: #9ac000;
     border-radius: 10px;
     margin-top: 20px;
@@ -183,29 +133,4 @@ fieldset{
     outline-offset: -2px;
     outline-style: auto;
     outline-width: 5px;
-}
-
-
-
-
-footer {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-    margin-bottom: -60px;
-    padding-top: auto;
-    padding-bottom: 0px;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 40px;
-    background: linear-gradient(135deg, #ffffff22, #ffffff44);
-}
-footer p {
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: 15px;
-    margin-bottom: 0px;
-    font-family: "Reenie Beanie";
-    color: #ebfff7;
 }

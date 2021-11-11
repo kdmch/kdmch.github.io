@@ -3,7 +3,7 @@
 body{
     display: block;
     background-color: #111822;
-    background: linear-gradient(to right, #111122f9, #112222f9), url("https://mitori.art/img/background.png");
+    background: linear-gradient(to right, #111122e9, #112222e9), url("https://mitori.art/img/background.png");
     background-size: cover;
     background-attachment: fixed;
     margin: 0;

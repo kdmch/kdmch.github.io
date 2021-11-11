@@ -16,6 +16,7 @@
         <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
         <link rel=”icon” href=“favicon.ico”>
         <link rel="apple-touch-icon" href="https://mitori.art/img/cover.jpg">
+        <link rel="stylesheet" href="https://mitori.art/common.css">
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com"> 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
@@ -26,15 +27,12 @@
     </head>
     <body>
         <header id="header">
-            <a href="./"><img src="https://mitori.art/img/logo.png" alt="logo"></a>
-            <div class="pf">Unicode Widgets</div>
-            <!--
-            <nav>
-                <span><a href="https://mitori.art/"> top </a></span>.
-                <span><a href="https://mitori.art/portfolio"> portfolio </a></span>.
-                <span><a href="https://mitori.art/diary/"> diary </a></span>
-            </nav>
-            -->
+            <div class="headerleft">
+                <div class="logo">
+                    <a href="./"><img src="https://mitori.art/img/home.png" alt="home"></a>
+                </div>
+                <div class="pf">Unicode Widgets</div>
+            </div>
         </header>
         
         <div id="widgets">
@@ -48,8 +46,8 @@
                 <div class="form">
                     <form action="">
                         <div class="field">
-                            <input id="enc_textbox" name="enc_textbox" type="text" placeholder="Input Here" onkeyup="update()">
-                            <div id="enc_result">r
+                            <input id="enc_textbox" name="enc_textbox" type="text" placeholder="Input Here" onInput="encTransform(this)">
+                            <div id="enc_result">
                             </div>
                         </div>
                         
