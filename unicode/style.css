@@ -8,6 +8,18 @@
     --size-checkbox: 180px;
     --size-like: 16px;
 }
+@media (max-width: 769px){
+:root{
+    --size-outer: auto;
+    --size-tag: 32px;
+    --size-text: 16px;
+    --size-field: auto;
+    --size-checkbox: auto;
+    --size-like: 16px;
+}
+}
+
+
 
 body{
     display: block;
@@ -43,9 +55,9 @@ body{
     justify-content: space-between;
 }
 .tag p{
+    font-size: var(--size-tag);
     margin-top: -10px;
     margin-bottom: 20px;
-    font-size: var(--size-tag);
 }
 .likethis{
     font-family: Arial, Helvetica, sans-serif;
@@ -53,8 +65,8 @@ body{
     background-color: #9ac000;
     border-radius: 10px;
     margin-top: -10px;
-    margin-right: 2px;
     margin-bottom: 20px;
+    margin-right: 2px;
     padding-top: 10px;
     padding-left: 20px;
     padding-right: 10px;
@@ -130,8 +142,52 @@ fieldset{
     text-shadow: 0 0 1px rgba(0,0,0,.7);
 }
 .radio-inline__input:focus + .radio-inline__label {
-    outline-color: #4D90FE;
+    outline-color: #9ac000;
     outline-offset: -2px;
     outline-style: auto;
-    outline-width: 5px;
+    outline-width: 0px;
+}
+
+@media (max-width: 769px){
+    #widget{
+        display: block;
+        margin: auto;
+    }
+    .form{
+        display: block;
+    }
+    .field{
+        margin-left: 0px;
+    }
+    #enc_textbox{
+        width:initial;
+        height: 32px;
+    }
+    #enc_result{
+        padding-top: 8px;
+        height: 32px;
+    }
+    fieldset{
+        text-align: center;
+        margin-top: 20px;
+        margin-left: 0px;
+        padding-left: 10px;
+        padding-right: auto;
+    }
+    .tag{
+        justify-content: center;
+        gap: 20px;
+    }
+    .likethis{
+        background: none;
+        color: #fff;
+        height: 24px;
+        margin-top: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        padding-top: 0px;
+        padding-left: 10px;
+        padding-right: 5px;
+    }
 }
