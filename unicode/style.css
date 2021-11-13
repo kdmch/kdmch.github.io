@@ -38,7 +38,6 @@ body{
 #widgets {
     display: flex;
     margin: 20px;
-    margin-right: 20px;
     font-family: "Montserrat";
     font-size: 12px;
     color: #fff;
