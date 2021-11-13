@@ -15,7 +15,7 @@
     --size-text: 16px;
     --size-field: auto;
     --size-checkbox: auto;
-    --size-like: 16px;
+    --size-like: 14px;
 }
 }
 
@@ -176,6 +176,7 @@ fieldset{
         margin-left: 0px;
     }
     #enc_textbox{
+        width: 93%;
         height: 48px;
         margin-left: auto;
         margin-right: auto;
