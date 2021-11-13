@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 :root{
-    --size-outer: 560px;
+    --size-outer: 590px;
     --size-tag: 40px;
     --size-text: 20px;
     --size-field: 300px;
@@ -10,7 +10,7 @@
 }
 @media (max-width: 769px){
 :root{
-    --size-outer: auto;
+    --size-outer: 100%;
     --size-tag: 30px;
     --size-text: 16px;
     --size-field: auto;
@@ -54,6 +54,7 @@ body{
 .tag{
     display: flex;
     justify-content: space-between;
+    margin-left: 10px;
 }
 .tag p{
     font-size: var(--size-tag);
@@ -104,11 +105,17 @@ fieldset{
     background-color: #7d9c00;
     border-radius: 10px;
     color: #fff;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: auto;
 
+    resize: none;
     width: var(--size-field);
-    height: 100px;
+    height: 80px;
+    padding-top: 16px;
     padding-left: 20px;
 
+    padding-right: 20px;
     outline: none;
     border: none;
 }
@@ -122,13 +129,16 @@ fieldset{
     background-color: #9ac000;
     border-radius: 10px;
     color: #fff;
+    word-break: break-all;
+    overflow: auto;
 
     width: var(--size-field);
-    height: 80px;
+    height: 100px;
+    padding-top: 16px;
     padding-left: 20px;
 
     margin-top: 20px;
-    padding-top: 20px;
+    padding-right: 20px;
 
 }
 .radio-inline__input {
@@ -162,29 +172,32 @@ fieldset{
         display: block;
     }
     .field{
+        width: var(--size-field);
         margin-left: 0px;
     }
     #enc_textbox{
-        box-sizing: inherit;
-        width: calc(var(--size-field)+32px);
-        width: 300px;
-        height: 32px;
+        height: 48px;
+        margin-left: auto;
+        margin-right: auto;
     }
     #enc_result{
         margin-left: auto;
         margin-right: auto;
-        padding-top: 8px;
-        height: 32px;
+        padding-top: 10px;
+
     }
     fieldset{
-        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0px;
+        justify-content: start;
         margin-top: 20px;
         margin-left: 0px;
         padding-left: 10px;
         padding-right: auto;
     }
     .tag{
-        justify-content: center;
+        justify-content: start;
         gap: 20px;
     }
     .likethis{
