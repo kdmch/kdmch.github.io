@@ -44,40 +44,40 @@
                     </div>
                 </div>
                 <div class="form">
-                    <form action="">
+                    <form id="enc">
                         <div class="field">
-                            <textarea id="enc_textbox" name="enc_textbox" type="text" cols="" placeholder="Input Here" onInput="encTransform(this)"></textarea>
+                            <textarea id="enc_textbox" name="enc_textbox" type="text" placeholder="Input Here" onclick="encTransform(this)" onInput="encTransform(this)"></textarea>
                             <div id="enc_result">
                             </div>
                         </div>
                         
+                        <fieldset>
+                            <div>
+                                <input class="radio-inline__input" type="radio" value="0" id="enc0" name="encradio" checked>
+                                <label class="radio-inline__label" for="enc0">🄰 squared</label>
+                            </div>
+                            <div>
+                                <input class="radio-inline__input" type="radio" value="1" id="enc1" name="encradio">
+                                <label class="radio-inline__label" for="enc1">🅰 negative squared</label>
+                            </div>
+                            <div>
+                                <input class="radio-inline__input" type="radio" value="2" id="enc2" name="encradio">
+                                <label class="radio-inline__label" for="enc2">Ⓐ circled</label>
+                            </div>
+                            <div>
+                                <input class="radio-inline__input" type="radio" value="3" id="enc3" name="encradio">
+                                <label class="radio-inline__label" for="enc3">🅐 negative circled</label>
+                            </div>
+                            <div>
+                                <input class="radio-inline__input" type="radio" value="4" id="enc4" name="encradio">
+                                <label class="radio-inline__label" for="enc4">🄐 parenthesized</label>
+                            </div>
+                            <div>
+                                <input class="radio-inline__input" type="radio" value="5" id="enc5" name="encradio">
+                                <label class="radio-inline__label" for="enc5">🇦 regional indicator</label>
+                            </div>
+                        </fieldset>
                     </form>
-                    <fieldset>
-                        <div>
-                            <input class="radio-inline__input" type="radio" value="enc_psq" id="enc_psq" name="accessible-radio" checked>
-                            <label class="radio-inline__label" for="enc_psq">🄰 squared</label>
-                        </div>
-                        <div>
-                            <input class="radio-inline__input" type="radio" value="enc_nsq" id="enc_nsq" name="accessible-radio">
-                            <label class="radio-inline__label" for="enc_nsq">🅰 negative squared</label>
-                        </div>
-                        <div>
-                            <input class="radio-inline__input" type="radio" value="enc_cir" id="enc_cir" name="accessible-radio">
-                            <label class="radio-inline__label" for="enc_cir">Ⓐ circled</label>
-                        </div>
-                        <div>
-                            <input class="radio-inline__input" type="radio" value="enc_ncr" id="enc_ncr" name="accessible-radio">
-                            <label class="radio-inline__label" for="enc_ncr">🅐 negative circled</label>
-                        </div>
-                        <div>
-                            <input class="radio-inline__input" type="radio" value="enc_par" id="enc_par" name="accessible-radio">
-                            <label class="radio-inline__label" for="enc_par">🄐 parenthesized</label>
-                        </div>
-                        <div>
-                            <input class="radio-inline__input" type="radio" value="enc_ris" id="enc_ris" name="accessible-radio">
-                            <label class="radio-inline__label" for="enc_ris">🇦 regional indicator</label>
-                        </div>
-                    </fieldset>
                 </div>
             </div>
 

@@ -7,6 +7,7 @@
     --size-field: 300px;
     --size-checkbox: 180px;
     --size-like: 16px;
+    --color-hue-1: 72;
 }
 @media (max-width: 769px){
 :root{
@@ -46,7 +47,7 @@ body{
 
 }
 #enclosed{
-    background-color: #a7d000;
+    background-color: hsl(var(--color-hue-1), 100%, 41%);
     border-radius: 24px;
     width: var(--size-outer);
     padding: 32px;
@@ -64,7 +65,7 @@ body{
 .likethis{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    background-color: #9ac000;
+    background-color: hsl(var(--color-hue-1), 100%, 38%);
     border-radius: 10px;
     margin-top: -10px;
     margin-bottom: 20px;
@@ -84,7 +85,7 @@ fieldset{
     display: block;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    background-color: #9ac000;
+    background-color: hsl(var(--color-hue-1), 100%, 38%);
     margin-left: auto;
     margin-right: 2px;
     padding: 10px;
@@ -102,7 +103,7 @@ fieldset{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: var(--size-text);
-    background-color: #7d9c00;
+    background-color: hsl(var(--color-hue-1), 100%, 31%);
     border-radius: 10px;
     color: #fff;
     word-wrap: break-word;
@@ -120,13 +121,13 @@ fieldset{
     border: none;
 }
 ::placeholder{
-    color: #a7d000;
+    color: hsl(var(--color-hue-1), 100%, 41%);
 }
 #enc_result{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: var(--size-text);
-    background-color: #9ac000;
+    background-color: hsl(var(--color-hue-1), 100%, 38%);
     border-radius: 10px;
     color: #fff;
     word-break: break-all;
@@ -152,12 +153,11 @@ fieldset{
     transition: all .15s;
 }
 .radio-inline__input:checked + .radio-inline__label {
-    background: #7d9c00;
+    background: hsl(var(--color-hue-1), 100%, 31%);
     color: #fff;
-    text-shadow: 0 0 1px rgba(0,0,0,.7);
 }
 .radio-inline__input:focus + .radio-inline__label {
-    outline-color: #9ac000;
+    outline-color: hsl(var(--color-hue-1),100%, 38%);
     outline-offset: -2px;
     outline-style: auto;
     outline-width: 0px;
@@ -172,11 +172,12 @@ fieldset{
         display: block;
     }
     .field{
-        width: var(--size-field);
+        min-width: var(--size-field);
         margin-left: 0px;
     }
     #enc_textbox{
-        width: 91%;
+        box-sizing: border-box;
+        min-width: 80%;
         height: 48px;
         margin-left: auto;
         margin-right: auto;
