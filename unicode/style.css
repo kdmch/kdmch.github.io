@@ -176,7 +176,7 @@ fieldset{
         margin-left: 0px;
     }
     #enc_textbox{
-        width: 93%;
+        width: 91%;
         height: 48px;
         margin-left: auto;
         margin-right: auto;
@@ -200,6 +200,7 @@ fieldset{
     .tag{
         justify-content: start;
         gap: 20px;
+        margin-left: 0px;
     }
     .likethis{
         background: none;
