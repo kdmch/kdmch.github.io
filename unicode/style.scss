@@ -1,25 +1,46 @@
 @charset "UTF-8";
 
 :root{
-    --size-outer: 590px;
-    --size-tag: 40px;
-    --size-text: 20px;
-    --size-field: 300px;
-    --size-checkbox: 180px;
-    --size-like: 16px;
-    --color-hue-1: 72;
-    --color-hue-2: 154;
+    $size-outer: 590px;
+    $size-tag: 40px;
+    $size-text: 20px;
+    $size-field: 300px;
+    $size-checkbox: 180px;
+    $size-like: 16px;
+    $color-enc: 72;
+    $color-sty: 154;
 }
 @media (max-width: 769px){
 :root{
-    --size-outer: 100%;
-    --size-tag: 30px;
-    --size-text: 16px;
-    --size-field: auto;
-    --size-checkbox: auto;
-    --size-like: 14px;
+    $size-outer: 100%;
+    $size-tag: 30px;
+    $size-text: 16px;
+    $size-field: auto;
+    $size-checkbox: auto;
+    $size-like: 14px;
 }
 }
+
+#enclosed{
+    @include enclosed($color-enc);
+}
+#enc_likethis{
+    @include likethis($color-enc);
+}
+#enc_textbox{
+    @include enc_textbox($color-enc);
+}
+::placeholder{
+    @include placeholder($color-enc);
+}
+#enc_result{
+    @include enc_result($color-enc);
+}
+#enc_fieldset{
+    @include enc_fieldset($color-enc);
+}
+
+
 
 
 
@@ -47,26 +68,29 @@ body{
     color: #fff;
 
 }
-#enclosed{
-    background-color: hsl(var(--color-hue-1), 100%, 41%);
+
+@mixin enclosed($color){
+    background-color: hsl($color, 100%, 41%);
     border-radius: 24px;
-    width: var(--size-outer);
+    width: $size-outer;
     padding: 32px;
 }
+
+
 .tag{
     display: flex;
     justify-content: space-between;
     margin-left: 10px;
 }
 .tag p{
-    font-size: var(--size-tag);
+    font-size: $size-tag;
     margin-top: -10px;
     margin-bottom: 20px;
 }
-.likethis{
+@mixin likethis($color){
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    background-color: hsl(var(--color-hue-1), 100%, 38%);
+    background-color: hsl($color, 100%, 38%);
     border-radius: 10px;
     margin-top: -10px;
     margin-bottom: 20px;
@@ -74,10 +98,11 @@ body{
     padding-top: 10px;
     padding-left: 20px;
     padding-right: 10px;
-    width: var(--size-checkbox);
-    font-size: var(--size-like);
+    width: $size-checkbox;
+    font-size: $size-like;
     letter-spacing: 5px;
 }
+
 .forme{
     display: flex;
     gap: 30px;
@@ -87,11 +112,11 @@ body{
     margin-left: 10px;
     text-align: start;
 }
-#enc_textbox{
+@mixin enc_textbox($color){
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    font-size: var(--size-text);
-    background-color: hsl(var(--color-hue-1), 100%, 31%);
+    font-size: $size-text;
+    background-color: hsl($color, 100%, 31%);
     border-radius: 10px;
     color: #fff;
     word-wrap: break-word;
@@ -99,7 +124,7 @@ body{
     overflow: auto;
 
     resize: none;
-    width: var(--size-field);
+    width: $size-field;
     height: 80px;
     padding-top: 16px;
     padding-left: 20px;
@@ -108,38 +133,38 @@ body{
     outline: none;
     border: none;
 }
-::placeholder{
-    color: hsl(var(--color-hue-1), 100%, 41%);
+@mixin placeholder($color){
+    color: hsl($color, 100%, 41%);
 }
-#enc_result{
+
+@mixin enc_result($color){
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    font-size: var(--size-text);
-    background-color: hsl(var(--color-hue-1), 100%, 38%);
+    font-size: $size-text;
+    background-color: hsl($color, 100%, 38%);
     border-radius: 10px;
     color: #fff;
     word-break: break-all;
     overflow: auto;
 
-    width: var(--size-field);
+    width: $size-field;
     height: 100px;
     padding-top: 16px;
     padding-left: 20px;
 
     margin-top: 20px;
     padding-right: 20px;
-
 }
 
-fieldset{
+@mixin enc_fieldset($color){
     display: block;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    background-color: hsl(var(--color-hue-1), 100%, 38%);
+    background-color: hsl($color, 100%, 38%);
     margin-left: auto;
     margin-right: 2px;
     padding: 10px;
-    width: var(--size-checkbox);
+    width: $size-checkbox;
     border: none;
     border-radius: 12px;
     line-height: 32px;
@@ -155,11 +180,11 @@ fieldset{
     transition: all .15s;
 }
 .radio-inline__input:checked + .radio-inline__label {
-    background: hsl(var(--color-hue-1), 100%, 31%);
+    background: hsl($color, 100%, 31%);
     color: #fff;
 }
 .radio-inline__input:focus + .radio-inline__label {
-    outline-color: hsl(var(--color-hue-1),100%, 38%);
+    outline-color: hsl($color,100%, 38%);
     outline-offset: -2px;
     outline-style: auto;
     outline-width: 0px;
@@ -174,7 +199,7 @@ fieldset{
         display: block;
     }
     .field{
-        min-width: var(--size-field);
+        min-width: $size-field;
         margin-left: 0px;
     }
     #enc_textbox{
