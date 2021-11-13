@@ -77,22 +77,9 @@ body{
     font-size: var(--size-like);
     letter-spacing: 5px;
 }
-.form{
+.forme{
     display: flex;
     gap: 30px;
-}
-fieldset{
-    display: block;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    background-color: hsl(var(--color-hue-1), 100%, 38%);
-    margin-left: auto;
-    margin-right: 2px;
-    padding: 10px;
-    width: var(--size-checkbox);
-    border: none;
-    border-radius: 12px;
-    line-height: 32px;
 }
 .field{
     display: block;
@@ -142,6 +129,20 @@ fieldset{
     padding-right: 20px;
 
 }
+
+fieldset{
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    background-color: hsl(var(--color-hue-1), 100%, 38%);
+    margin-left: auto;
+    margin-right: 2px;
+    padding: 10px;
+    width: var(--size-checkbox);
+    border: none;
+    border-radius: 12px;
+    line-height: 32px;
+}
 .radio-inline__input {
     clip: rect(1px, 1px, 1px, 1px);
     position: absolute !important;
@@ -168,7 +169,7 @@ fieldset{
         display: block;
         margin: auto;
     }
-    .form{
+    .forme{
         display: block;
     }
     .field{
