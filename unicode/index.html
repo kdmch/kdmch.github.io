@@ -17,7 +17,7 @@
         <link rel=”icon” href=“favicon.ico”>
         <link rel="apple-touch-icon" href="https://mitori.art/img/cover.jpg">
         <link rel="stylesheet" href="https://mitori.art/common.css">
-        <link rel="stylesheet" href="style.scss">
+        <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com"> 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
         <link href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&display=swap" rel="stylesheet">
@@ -35,10 +35,12 @@
             </div>
         </header>
         
+
+
         <div class="widgets">
             <div id="enclosed">
                 <div class="tag">
-                    <p>Enclosed</p>
+                    <div id="enc_tag">Enclosed</div>
                     <div id="enc_likethis">
                         🄰🅰Ⓐ🅐🄐🇦
                     </div>
@@ -52,28 +54,104 @@
                         <div id="enc_fieldset">
                             <fieldset>
                                 <div>
-                                    <input class="radio-inline__input" type="radio" value="0" id="enc0" name="encradio" checked>
-                                    <label class="radio-inline__label" for="enc0">🄰 squared</label>
+                                    <input class="rii_enc" type="radio" value="0" id="enc0" name="encradio" checked>
+                                    <label class="ril_enc" for="enc0">🄰 squared</label>
                                 </div>
                                 <div>
-                                    <input class="radio-inline__input" type="radio" value="1" id="enc1" name="encradio">
-                                    <label class="radio-inline__label" for="enc1">🅰 negative squared</label>
+                                    <input class="rii_enc" type="radio" value="1" id="enc1" name="encradio">
+                                    <label class="ril_enc" for="enc1">🅰 negative squared</label>
                                 </div>
                                 <div>
-                                    <input class="radio-inline__input" type="radio" value="2" id="enc2" name="encradio">
-                                    <label class="radio-inline__label" for="enc2">Ⓐ circled</label>
+                                    <input class="rii_enc" type="radio" value="2" id="enc2" name="encradio">
+                                    <label class="ril_enc" for="enc2">Ⓐ circled</label>
                                 </div>
                                 <div>
-                                    <input class="radio-inline__input" type="radio" value="3" id="enc3" name="encradio">
-                                    <label class="radio-inline__label" for="enc3">🅐 negative circled</label>
+                                    <input class="rii_enc" type="radio" value="3" id="enc3" name="encradio">
+                                    <label class="ril_enc" for="enc3">🅐 negative circled</label>
                                 </div>
                                 <div>
-                                    <input class="radio-inline__input" type="radio" value="4" id="enc4" name="encradio">
-                                    <label class="radio-inline__label" for="enc4">🄐 parenthesized</label>
+                                    <input class="rii_enc" type="radio" value="4" id="enc4" name="encradio">
+                                    <label class="ril_enc" for="enc4">🄐 parenthesized</label>
                                 </div>
                                 <div>
-                                    <input class="radio-inline__input" type="radio" value="5" id="enc5" name="encradio">
-                                    <label class="radio-inline__label" for="enc5">🇦 regional indicator</label>
+                                    <input class="rii_enc" type="radio" value="5" id="enc5" name="encradio">
+                                    <label class="ril_enc" for="enc5">🇦 regional indicator</label>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+        <div class="widgets">
+            <div id="math">
+                <div class="tag">
+                    <div id="mth_tag">Mathematical</div>
+                    <div id="mth_likethis">
+                        𝐀𝐴𝑨𝒜𝓐𝔄𝕬𝔸𝖠𝗔𝘈𝘼𝙰
+                    </div>
+                </div>
+                <form id="mth" action="">
+                    <div class="forme">
+                        <div class="field">
+                            <textarea id="mth_textbox" name="mth_textbox" type="text" placeholder="Input Here" onclick="mthTransform(this)" onInput="mthTransform(this)"></textarea>
+                            <div id="mth_result"></div>
+                        </div>
+                        <div id="mth_fieldset">
+                            <fieldset>
+                                <div>
+                                    <input class="rii_mth" type="radio" value="0" id="mth0" name="mthradio" checked>
+                                    <label class="ril_mth" for="mth0">𝐀 bold</label>
+                                </div>
+                                <div>
+                                    <input class="rii_mth" type="radio" value="1" id="mth1" name="mthradio">
+                                    <label class="ril_mth" for="mth1">𝐴 italic</label>
+                                </div>
+                                <div>
+                                    <input class="rii_mth" type="radio" value="2" id="mth2" name="mthradio">
+                                    <label class="ril_mth" for="mth2">𝑨 bold italic</label>
+                                </div>
+                                <div>
+                                    <input class="rii_mth" type="radio" value="3" id="mth3" name="mthradio">
+                                    <label class="ril_mth" for="mth3">𝒜 script</label>
+                                </div>
+                                <div>
+                                    <input class="rii_mth" type="radio" value="4" id="mth4" name="mthradio">
+                                    <label class="ril_mth" for="mth4">𝓐 bold script</label>
+                                </div>
+                                <div>
+                                    <input class="rii_mth" type="radio" value="5" id="mth5" name="mthradio">
+                                    <label class="ril_mth" for="mth5">𝔄 fractur</label>
+                                </div>
+                                <div>
+                                    <input class="rii_mth" type="radio" value="6" id="mth6" name="mthradio">
+                                    <label class="ril_mth" for="mth6">𝕬 bold fractur</label>
+                                </div>
+                                <div>
+                                    <input class="rii_mth" type="radio" value="7" id="mth7" name="mthradio">
+                                    <label class="ril_mth" for="mth7">𝔸 double struck</label>
+                                </div>
+                                <div>
+                                    <input class="rii_mth" type="radio" value="8" id="mth8" name="mthradio">
+                                    <label class="ril_mth" for="mth8">𝖠 sans-serif</label>
+                                </div>
+                                <div>
+                                    <input class="rii_mth" type="radio" value="9" id="mth9" name="mthradio">
+                                    <label class="ril_mth" for="mth9">𝗔 sans-serif bold</label>
+                                </div>
+                                <div>
+                                    <input class="rii_mth" type="radio" value="10" id="mth10" name="mthradio">
+                                    <label class="ril_mth" for="mth10">𝘈 sans-serif italic</label>
+                                </div>
+                                <div>
+                                    <input class="rii_mth" type="radio" value="11" id="mth11" name="mthradio">
+                                    <label class="ril_mth" for="mth11">𝘼 sans-serif bold italic</label>
+                                </div>
+                                <div>
+                                    <input class="rii_mth" type="radio" value="12" id="mth12" name="mthradio">
+                                    <label class="ril_mth" for="mth12">𝙰 monospace</label>
                                 </div>
                             </fieldset>
                         </div>

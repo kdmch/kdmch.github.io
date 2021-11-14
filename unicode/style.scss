@@ -1,43 +1,23 @@
 @charset "UTF-8";
 
-:root{
+
     $size-outer: 590px;
     $size-tag: 40px;
     $size-text: 20px;
     $size-field: 300px;
-    $size-checkbox: 180px;
+    $size-checkbox: 200px;
     $size-like: 16px;
+    $color: 0;
     $color-enc: 72;
-    $color-sty: 154;
-}
+    $color-mth: 154;
+
 @media (max-width: 769px){
-:root{
     $size-outer: 100%;
     $size-tag: 30px;
     $size-text: 16px;
     $size-field: auto;
     $size-checkbox: auto;
     $size-like: 14px;
-}
-}
-
-#enclosed{
-    @include enclosed($color-enc);
-}
-#enc_likethis{
-    @include likethis($color-enc);
-}
-#enc_textbox{
-    @include enc_textbox($color-enc);
-}
-::placeholder{
-    @include placeholder($color-enc);
-}
-#enc_result{
-    @include enc_result($color-enc);
-}
-#enc_fieldset{
-    @include enc_fieldset($color-enc);
 }
 
 
@@ -69,11 +49,13 @@ body{
 
 }
 
-@mixin enclosed($color){
+@mixin outer($color){
     background-color: hsl($color, 100%, 41%);
     border-radius: 24px;
     width: $size-outer;
     padding: 32px;
+    padding-left: 24px;
+    margin-top: 12px;
 }
 
 
@@ -82,11 +64,12 @@ body{
     justify-content: space-between;
     margin-left: 10px;
 }
-.tag p{
+@mixin tagp{
     font-size: $size-tag;
     margin-top: -10px;
     margin-bottom: 20px;
 }
+
 @mixin likethis($color){
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
@@ -105,14 +88,14 @@ body{
 
 .forme{
     display: flex;
-    gap: 30px;
+    justify-content: space-between;
 }
 .field{
     display: block;
     margin-left: 10px;
     text-align: start;
 }
-@mixin enc_textbox($color){
+@mixin textbox($color){
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: $size-text;
@@ -137,7 +120,7 @@ body{
     color: hsl($color, 100%, 41%);
 }
 
-@mixin enc_result($color){
+@mixin result($color){
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: $size-text;
@@ -156,39 +139,129 @@ body{
     padding-right: 20px;
 }
 
-@mixin enc_fieldset($color){
+fieldset{
+    border: none;
+}
+
+@mixin fieldset($color){
     display: block;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
     background-color: hsl($color, 100%, 38%);
-    margin-left: auto;
-    margin-right: 2px;
-    padding: 10px;
+    padding: 5px;
     width: $size-checkbox;
     border: none;
     border-radius: 12px;
-    line-height: 32px;
+    line-height: 28px;
 }
-.radio-inline__input {
+
+@mixin rii{
     clip: rect(1px, 1px, 1px, 1px);
     position: absolute !important;
 }
-.radio-inline__label {
-    padding: 0.5rem 1rem;
+@mixin ril{
+    padding: 8px 10px;
     margin-right: 18px;
     border-radius: 10px;
     transition: all .15s;
 }
-.radio-inline__input:checked + .radio-inline__label {
+
+@mixin riic($color){
     background: hsl($color, 100%, 31%);
     color: #fff;
 }
-.radio-inline__input:focus + .radio-inline__label {
+
+@mixin rilf($color){
     outline-color: hsl($color,100%, 38%);
     outline-offset: -2px;
     outline-style: auto;
     outline-width: 0px;
 }
+
+
+
+
+#enclosed{
+    @include outer($color-enc);
+}
+#enc_tag{
+    @include tagp;
+}
+#enc_likethis{
+    @include likethis($color-enc);
+}
+#enc_textbox{
+    @include textbox($color-enc);
+}
+::placeholder{
+    @include placeholder($color-enc);
+}
+#enc_result{
+    @include result($color-enc);
+}
+#enc_fieldset{
+    @include fieldset($color-enc);
+}
+.rii_enc{
+    @include rii();
+}
+.ril_enc{
+    @include ril();
+}
+.rii_enc:checked + .ril_enc{
+    @include riic($color-enc);
+}
+.rii_enc:focus + .ril_enc{
+    @include rilf($color-enc);
+}
+
+
+
+
+#math{
+    @include outer($color-mth);
+}
+#mth_tag{
+    @include tagp;
+}
+#mth_likethis{
+    @include likethis($color-mth);
+    letter-spacing: 2px;
+    padding-left: 10px;
+}
+#mth_textbox{
+    @include textbox($color-mth);
+}
+#mth_textbox::placeholder{
+    @include placeholder($color-mth);
+}
+#mth_result{
+    @include result($color-mth);
+}
+#mth_fieldset{
+    @include fieldset($color-mth);
+}
+.rii_mth{
+    @include rii();
+}
+.ril_mth{
+    @include ril();
+}
+.rii_mth:checked + .ril_mth{
+    @include riic($color-mth);
+}
+.rii_mth:focus + .ril_mth{
+    @include rilf($color-mth);
+}
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 769px){
     .widget{
@@ -203,15 +276,12 @@ body{
         margin-left: 0px;
     }
     #enc_textbox{
-        box-sizing: border-box;
         min-width: 80%;
-        height: 48px;
         margin-left: auto;
         margin-right: auto;
     }
     #enc_result{
-        margin-left: auto;
-        margin-right: auto;
+        width: auto;
         padding-top: 10px;
 
     }
@@ -220,10 +290,10 @@ body{
         flex-wrap: wrap;
         gap: 0px;
         justify-content: start;
-        margin-top: 20px;
-        margin-left: 0px;
-        padding-left: 10px;
-        padding-right: auto;
+    }
+    #enc_fieldset{
+        margin-top: 24px;
+        width: auto;
     }
     .tag{
         justify-content: start;
@@ -242,4 +312,26 @@ body{
         padding-left: 10px;
         padding-right: 5px;
     }
+
+    #mth_tag{
+        font-size: calc(#{$size-tag} - 10px);
+    }
+    #mth_textbox{ // later.
+        min-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #mth_result{
+        width: auto;
+        padding-top: 10px;
+    }
+    #mth_fieldset{
+        margin-top: 24px;
+        width: auto;
+    }
+
+
+
+
+
 }
