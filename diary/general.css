@@ -43,8 +43,12 @@ article {
 }
 
 .sidebar{
+    display: block;
+    margin-top: -20px;
+}
+
+.index{
     /*position: sticky;*/
-    position: fixed;
     background-color: var(--sidebar-bg);
     border-radius: 15px;
     padding-bottom: 30px;
@@ -52,8 +56,7 @@ article {
     height: auto;
     text-align: center;
 }
-
-.sidebar a{
+.index a{
     margin-left: 10px;
     margin-right: 10px;
     font-size: small;
@@ -61,14 +64,39 @@ article {
     text-decoration: none;
 }
 
-.index{
+.index p{
     margin-top: 20px;
     margin-bottom: 20px;
+    padding-top: 20px;
+    font-family: "Montserrat";
+}
+.share{
+    /*position: sticky;*/
+    background-color: var(--sidebar-bg);
+    border-radius: 15px;
+    padding-bottom: 30px;
+    width: 150px;
+    height: auto;
+    text-align: center;
+}
+.share a{
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: small;
+    color: var(--text-bright);
+    text-decoration: none;
+}
+
+.share p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 20px;
     font-family: "Montserrat";
 }
 
+
 .main{
-    margin-left: 170px;
+    margin-left: auto;
     background: var(--main-bg);/*linear-gradient(to right, #ffffffcc, #ffffffdd);*/
     border-radius: 15px;
     flex-grow: 2;
@@ -139,17 +167,39 @@ h3{
         margin-right: 0px;
     }
     .sidebar{
+        display: flex;
+        justify-content: start;
+        gap: 20px;
+        margin-top: 0px;
+    }
+    .index{
+        flex-grow: 2;
         position: static;
         margin-left: 0px;
         margin-bottom: 20px;
         width: auto;
         height: auto;
     }
-    .sidebar a{
+    .index a{
         font-size: normal;
     }
-    .index{
-        padding-top: 30px;
+    .index p{
+        padding-top: 10px;
+    }
+    .share{
+        position: static;
+        margin-left: 0px;
+        margin-bottom: 20px;
+        width: 200px;
+        height: auto;
+    }
+    .share a{
+        font-size: normal;
+    }
+    .share p{
+        padding-top: 10px;
+        padding-left: 30px;
+        padding-right: 30px;
     }
     .main{
         margin-left: 0px;
@@ -170,7 +220,7 @@ h3{
         margin-bottom: 0px;
     }
     h3{
-        margin-left: -20px;
-        margin-right: -20px;
+        margin-left: 0px;
+        margin-right: 0px;
     }
 }
