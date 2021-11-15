@@ -135,6 +135,8 @@ h3{
 @media (max-width: 769px){
     article {
         display: block;
+        margin-left: 0px;
+        margin-right: 0px;
     }
     .sidebar{
         position: static;
@@ -168,7 +170,7 @@ h3{
         margin-bottom: 0px;
     }
     h3{
-        margin-left: -40px;
-        margin-right: -40px;
+        margin-left: -20px;
+        margin-right: -20px;
     }
 }
