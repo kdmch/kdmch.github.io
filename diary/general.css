@@ -140,7 +140,7 @@ h3{
     }
     .sidebar{
         position: static;
-        margin-left: 20px;
+        margin-left: 0px;
         margin-bottom: 20px;
         width: auto;
         height: auto;
@@ -152,7 +152,7 @@ h3{
         padding-top: 30px;
     }
     .main{
-        margin-left: 20px;
+        margin-left: 0px;
         margin-top: 0px;
     }
     .heading p{
