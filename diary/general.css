@@ -178,7 +178,7 @@ h3{
         margin-top: 0px;
     }
     .index{
-        flex-grow: 2;
+        flex-grow: 1;
         position: static;
         margin-left: 0px;
         margin-bottom: 20px;
@@ -195,7 +195,7 @@ h3{
         position: static;
         margin-left: 0px;
         margin-bottom: 20px;
-        width: 30vh;
+        width: 20vh;
         height: auto;
     }
     .sideshare{
@@ -203,7 +203,7 @@ h3{
         margin-bottom: -10px;
     }
     .share img{
-        width: 35%;
+        width: 33%;
         height: auto;
     }
     .share p{
