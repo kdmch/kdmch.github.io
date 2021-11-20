@@ -3,17 +3,20 @@
 
     $size-outer: 590px;
     $size-tag: 40px;
+    $size-desc: 16px;
     $size-text: 20px;
     $size-field: 300px;
     $size-checkbox: 200px;
     $size-like: 16px;
     $color: 0;
-    $color-enc: 72;
-    $color-mth: 154;
+    $color-wts: 10;
+    $color-enc: 36;
+    $color-mth: 56;
 
-@media (max-width: 769px){
+@media (max-width: 660px){
     $size-outer: 100%;
     $size-tag: 20px;
+    $size-desc: 14px;
     $size-text: 16px;
     $size-field: auto;
     $size-checkbox: auto;
@@ -37,6 +40,10 @@ body{
     width: 100%;
     height: 100vh;
 }
+a{
+    color: #fff;
+}
+
 
 .widgets {
     display: flex;
@@ -85,7 +92,18 @@ body{
     font-size: $size-like;
     letter-spacing: 5px;
 }
-
+@mixin description($color){
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: $size-desc;
+    background-color: hsl($color, 100%, 38%);
+    border-radius: 10px;
+    word-break: normal;
+    margin-left: 10px;
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+}
 .forme{
     display: flex;
     justify-content: space-between;
@@ -180,6 +198,22 @@ fieldset{
 
 
 
+// --- --- --- for pc or tablet --- --- ---
+
+
+
+#whats{
+    @include outer($color-wts);
+}
+#wts_tag{
+    @include tagp;
+    font-size: 36px;
+    margin-bottom: 10px
+}
+.description{
+    @include description($color-wts);
+}
+
 #enclosed{
     @include outer($color-enc);
 }
@@ -257,13 +291,13 @@ fieldset{
 
 
 
+// --- --- --- for smartphone --- --- ---
 
 
 
 
 
-
-@media (max-width: 769px){
+@media (max-width: 660px){
     .widgets{
         margin-left: 0px;
         margin-right: 0px;
