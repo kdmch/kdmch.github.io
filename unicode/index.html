@@ -10,13 +10,13 @@
         <meta property="og:url" content="https://mitori.art/">
         <meta property="og:site_name" content="UnicodeHack - mitorie">
         <meta property="og:description" content="Decorate Your Text.">
-        <meta property="og:image" content="https://mitori.art/img/cover.jpg">
+        <meta property="og:image" content="../img/unicodehack.png">
         <meta name="twitter:card" content="summary">
         <meta name="twitter:site" content="@leffeine">
         <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
-        <link rel=”icon” href=“favicon.ico”>
-        <link rel="apple-touch-icon" href="https://mitori.art/img/cover.jpg">
-        <link rel="stylesheet" href="https://mitori.art/common.css">
+        <link rel=”icon” href=“uh-favicon.ico”>
+        <link rel="apple-touch-icon" href="../img/unicodehack.png">
+        <link rel="stylesheet" href="../common.css">
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com"> 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
@@ -91,9 +91,7 @@
                         </div>
                     </div>
                 </form>
-
             </div>
-
 
 
             <div id="math">
@@ -169,8 +167,51 @@
                 </form>
             </div>
 
+            <div id="combining">
+                <div class="tag">
+                    <div id="cmb_tag">Combining</div>
+                    <div id="cmb_likethis">
+                        🄰🅰Ⓐ🅐🄐🇦
+                    </div>
+                </div>
+                <form id="cmb" action="">
+                    <div class="forme">
+                        <div class="field">
+                            <textarea id="cmb_textbox" name="cmb_textbox" type="text" placeholder="Input Here" onclick="cmbTransform(this)" onInput="cmbTransform(this)"></textarea>
+                            <div id="cmb_result"></div>
+                        </div>
+                        <div id="cmb_fieldset">
+                            <fieldset>
+                                <div>
+                                    <input class="rii_cmb" type="radio" value="0" id="cmb0" name="cmbradio" checked>
+                                    <label class="ril_cmb" for="cmb0">🄰 squared</label>
+                                </div>
+                                <div>
+                                    <input class="rii_cmb" type="radio" value="1" id="cmb1" name="cmbradio">
+                                    <label class="ril_cmb" for="cmb1">🅰 negative squared</label>
+                                </div>
+                                <div>
+                                    <input class="rii_cmb" type="radio" value="2" id="cmb2" name="cmbradio">
+                                    <label class="ril_cmb" for="cmb2">Ⓐ circled</label>
+                                </div>
+                                <div>
+                                    <input class="rii_cmb" type="radio" value="3" id="cmb3" name="cmbradio">
+                                    <label class="ril_cmb" for="cmb3">🅐 negative circled</label>
+                                </div>
+                                <div>
+                                    <input class="rii_cmb" type="radio" value="4" id="cmb4" name="cmbradio">
+                                    <label class="ril_cmb" for="cmb4">🄐 parenthesized</label>
+                                </div>
+                                <div>
+                                    <input class="rii_cmb" type="radio" value="5" id="cmb5" name="cmbradio">
+                                    <label class="ril_cmb" for="cmb5">🇦 regional indicator</label>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
-
 
         <footer>
             <p>

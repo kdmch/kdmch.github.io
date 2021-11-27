@@ -13,11 +13,13 @@
     $size-wts:   0px;
     $size-enc: 400px;
     $size-mth: 400px;
+    $size-cmb: 400px;
 
     $color: 0;
     $color-wts: 10;
     $color-enc: 36;
     $color-mth: 56;
+    $color-cmb: 84;
 
 @media (max-width: 660px){
     $size-outer: auto;
@@ -37,7 +39,7 @@
 body{
     display: block;
     background-color: #111822;
-    background: linear-gradient(to right, #222244e9, #224444e9), url("https://mitori.art/img/background.png");
+    background: linear-gradient(to right, #222244e9,#224444e9), url("https://mitori.art/img/background.png");
     background-size: cover;
     background-attachment: fixed;
     margin: 0;
@@ -310,6 +312,42 @@ fieldset{
 
 
 
+#combining{
+    @include outer($color-cmb, $size-cmb);
+}
+#cmb_tag{
+    @include tagp;
+}
+#cmb_likethis{
+    @include likethis($color-cmb);
+    letter-spacing: 2px;
+    padding-left: 10px;
+}
+#cmb_textbox{
+    @include textbox($color-cmb);
+}
+#cmb_textbox::placeholder{
+    @include placeholder($color-cmb);
+}
+#cmb_result{
+    @include result($color-cmb);
+}
+#cmb_fieldset{
+    @include fieldset($color-cmb);
+}
+.rii_cmb{
+    @include rii();
+}
+.ril_cmb{
+    @include ril();
+}
+.rii_cmb:checked + .ril_cmb{
+    @include riic($color-cmb);
+}
+.rii_cmb:focus + .ril_cmb{
+    @include rilf($color-cmb);
+}
+
 
 
 // --- --- --- for smartphone --- --- ---
@@ -368,8 +406,7 @@ fieldset{
     #enc_likethis{
         width: auto;
         font-size: 12px;
-        word-break: break-all;
-        color: #fff;
+
         height: 24px;
         margin-top: -5px;
         margin-left: 0px;
@@ -384,14 +421,11 @@ fieldset{
 
 
 
-    #mth_tag{
-        font-size: 24px;
-    }
     #mth_likethis{
         width: auto;
         font-size: 12px;
+        word-break: break-all;
 
-        color: #fff;
         height: 24px;
         margin-top: -12px;
         margin-left: 0px;
@@ -418,6 +452,39 @@ fieldset{
     }
 
 
+
+
+    #cmb_tag{
+        font-size: 24px;
+    }
+    #cmb_likethis{
+        width: auto;
+        font-size: 12px;
+        word-break: break-all;
+        height: 24px;
+        margin-top: -12px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+        line-height: 12px;
+    }
+    #cmb_textbox{ // later.
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #cmb_result{
+        width: auto;
+        padding-top: 10px;
+    }
+    #cmb_fieldset{
+        margin-top: 24px;
+        width: auto;
+    }
 
 
 
