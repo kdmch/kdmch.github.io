@@ -2,8 +2,8 @@
 
 body{
     display: block;
-    background-color: #111822;
-    background: linear-gradient(to right, #111122e9, #112222e9), url("https://mitori.art/img/background.png");
+    background-color: #6f649d;
+    background: linear-gradient(to right, #7f2792d5, #5fa2a8d5), url("https://mitori.art/img/background.png");
     background-size: cover;
     background-attachment: fixed;
     margin: 0;
