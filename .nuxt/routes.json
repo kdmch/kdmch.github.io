@@ -1,0 +1,23 @@
+[
+  {
+    "name": "inspire",
+    "path": "/inspire",
+    "component": "/Users/mitori/kdmch.github.io/pages/inspire.vue",
+    "chunkName": "pages/inspire",
+    "_name": "_a094e8da"
+  },
+  {
+    "name": "playground",
+    "path": "/playground",
+    "component": "/Users/mitori/kdmch.github.io/pages/playground.vue",
+    "chunkName": "pages/playground",
+    "_name": "_3c9a4812"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/mitori/kdmch.github.io/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_6258d9cb"
+  }
+]
