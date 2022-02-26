@@ -5,7 +5,6 @@ import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
 const _a094e8da = () => interopDefault(import('../pages/inspire.vue' /* webpackChunkName: "pages/inspire" */))
-const _3c9a4812 = () => interopDefault(import('../pages/playground.vue' /* webpackChunkName: "pages/playground" */))
 const _42b1ce00 = () => interopDefault(import('../pages/sandbox.vue' /* webpackChunkName: "pages/sandbox" */))
 const _6258d9cb = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
@@ -24,10 +23,6 @@ export const routerOptions = {
     path: "/inspire",
     component: _a094e8da,
     name: "inspire"
-  }, {
-    path: "/playground",
-    component: _3c9a4812,
-    name: "playground"
   }, {
     path: "/sandbox",
     component: _42b1ce00,

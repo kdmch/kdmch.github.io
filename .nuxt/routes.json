@@ -7,13 +7,6 @@
     "_name": "_a094e8da"
   },
   {
-    "name": "playground",
-    "path": "/playground",
-    "component": "/Users/mitori/kdmch.github.io/pages/playground.vue",
-    "chunkName": "pages/playground",
-    "_name": "_3c9a4812"
-  },
-  {
     "name": "sandbox",
     "path": "/sandbox",
     "component": "/Users/mitori/kdmch.github.io/pages/sandbox.vue",
