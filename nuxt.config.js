@@ -39,7 +39,7 @@ export default {
         hid: 'og:image',
         property: 'og:image',
         content:
-          'https://mitori.art/img/cover.jpg',
+          'https://mitori.art/assets/cover.jpg',
       },
       {
         hid: 'og:twitter',
