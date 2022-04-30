@@ -1,4 +1,10 @@
 {
+  "Applike": {
+    "description": "Auto imported from components/Applike.vue"
+  },
+  "Captions": {
+    "description": "Auto imported from components/Captions.vue"
+  },
   "Footer": {
     "description": "Auto imported from components/Footer.vue"
   },
@@ -7,9 +13,6 @@
   },
   "NuxtLogo": {
     "description": "Auto imported from components/NuxtLogo.vue"
-  },
-  "Profile": {
-    "description": "Auto imported from components/Profile.vue"
   },
   "Tutorial": {
     "description": "Auto imported from components/Tutorial.vue"

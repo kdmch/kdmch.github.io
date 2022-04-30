@@ -1,5 +1,12 @@
 [
   {
+    "name": "index_old",
+    "path": "/index_old",
+    "component": "/Users/mitori/kdmch.github.io/pages/index_old.vue",
+    "chunkName": "pages/index_old",
+    "_name": "_58281c9a"
+  },
+  {
     "name": "inspire",
     "path": "/inspire",
     "component": "/Users/mitori/kdmch.github.io/pages/inspire.vue",
@@ -12,6 +19,13 @@
     "component": "/Users/mitori/kdmch.github.io/pages/sandbox.vue",
     "chunkName": "pages/sandbox",
     "_name": "_42b1ce00"
+  },
+  {
+    "name": "three2",
+    "path": "/three2",
+    "component": "/Users/mitori/kdmch.github.io/pages/three2.vue",
+    "chunkName": "pages/three2",
+    "_name": "_7c4babab"
   },
   {
     "name": "index",

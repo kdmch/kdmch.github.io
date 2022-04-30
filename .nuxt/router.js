@@ -4,8 +4,10 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
+const _58281c9a = () => interopDefault(import('../pages/index_old.vue' /* webpackChunkName: "pages/index_old" */))
 const _a094e8da = () => interopDefault(import('../pages/inspire.vue' /* webpackChunkName: "pages/inspire" */))
 const _42b1ce00 = () => interopDefault(import('../pages/sandbox.vue' /* webpackChunkName: "pages/sandbox" */))
+const _7c4babab = () => interopDefault(import('../pages/three2.vue' /* webpackChunkName: "pages/three2" */))
 const _6258d9cb = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
@@ -20,6 +22,10 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
+    path: "/index_old",
+    component: _58281c9a,
+    name: "index_old"
+  }, {
     path: "/inspire",
     component: _a094e8da,
     name: "inspire"
@@ -27,6 +33,10 @@ export const routerOptions = {
     path: "/sandbox",
     component: _42b1ce00,
     name: "sandbox"
+  }, {
+    path: "/three2",
+    component: _7c4babab,
+    name: "three2"
   }, {
     path: "/",
     component: _6258d9cb,
