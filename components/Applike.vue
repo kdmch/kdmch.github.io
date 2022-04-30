@@ -118,6 +118,8 @@ export default{
   #icons {
     position: relative;
     margin: 25% auto 25%;
+    padding-left: 3vh;
+    padding-right: 3vh;
     display: grid;
     grid-template-columns: repeat(5, 9vh);
     grid-template-rows: repeat(9, 9vh) ;
