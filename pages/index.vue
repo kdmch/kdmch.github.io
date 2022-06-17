@@ -14,9 +14,20 @@
 
 <script>
 import * as THREE from "three";
+import Applike from '~/components/Applike.vue';
 
 export default {
-  components: {},
+  components: { Applike },
+  head() {
+    return {
+      meta: [
+        { hid: 'og:title', property: 'og:title', content: '' },
+        { hid: 'og:description', property: 'og:description', content: '' },
+        { hid: 'og:url', property: 'og:url', content: '' },
+        { hid: 'og:image', property: 'og:image', content: '' },
+      ]
+    }
+  },
   data() {
     return {
       scene: undefined,

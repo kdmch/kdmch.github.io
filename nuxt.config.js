@@ -12,39 +12,21 @@ export default {
 
     title: 'mitorie',
     htmlAttrs: {
-      lang: 'en',
+      lang: 'ja',
+      prefix: 'og: http://ogp.me/ns#'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
       //{ name: 'format-detection', content: 'telephone=no' },
-      { hid: 'og:title', property: 'og:title', content: "mitorie" },
-      {
-        hid: 'og:description',
-        property: 'og:description',
-        content: "mitori's Portfolio",
-      },
-      {
-        hid: 'og:url',
-        property: 'og:url',
-        content: 'https://mitori.art/',
-      },
-      {
-        hid: 'og:type',
-        property: 'og:type',
-        content: 'website',
-      },
-      {
-        hid: 'og:image',
-        property: 'og:image',
-        content:
-          'https://mitori.art/assets/cover.jpg',
-      },
-      {
-        hid: 'og:twitter',
-        content: 'summary',
-      },
+      { hid: 'og:title',      property: 'og:title',      content: 'mitorie' },
+      { hid: 'og:site_name',  property: 'og:site_name',  content: 'mitorie' },
+      { hid: 'og:description',property: 'og:description',content: "mitori's Portfolio",},
+      { hid: 'og:url',        property: 'og:url',        content: 'https://mitori.art/',},
+      { hid: 'og:type',       property: 'og:type',       content: 'website',},
+      { hid: 'og:image',      property: 'og:image',      content: 'https://mitori.art/assets/cover.jpg',},
+      { hid: 'og:twitter',                               content: 'summary' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
@@ -89,7 +71,7 @@ export default {
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
-    customVariables: ['~/assets/variables.scss'],
+    customVariables: ['@/assets/variables.scss'],
     theme: {
       dark: true,
       themes: {
